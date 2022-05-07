@@ -99,7 +99,7 @@ jobs:
         if: ${{ steps.gitversion.outputs.PreReleaseTagWithDash == '' }}
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          tag: v${{ steps.gitversion.outputs.FullSemVer }}
+          tag: ${{ steps.gitversion.outputs.FullSemVer }}
 
       - name: Check out code
         uses: actions/checkout@v3
